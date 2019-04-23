@@ -1,0 +1,29 @@
+version: "3"
+services:
+#setup backend
+  server:
+    build: ./backend
+    expose:
+      - ${APP_SERVER_PORT}
+    environment:
+      API_HOST: ${API_HOST}
+      APP_SERVER_PORT: ${APP_SERVER_PORT}   
+    ports:
+      - ${APP_SERVER_PORT}:${APP_SERVER_PORT}
+    expose:
+      - "9000"
+    command: "npm start"
+# setup frontend
+  client:
+    build: ./frontend
+    
+    environment:
+      - FRONT_PORT=${FRONT_PORT}
+    expose:
+      - ${FRONT_PORT}
+    ports:
+      - ${FRONT_PORT}:${FRONT_PORT}
+    links:
+      - server
+    command: npm start
+      
