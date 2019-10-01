@@ -1,9 +1,10 @@
 const webpack = require('webpack');
-
+const webpackDevMiddleware = require('webpack-dev-middleware');
 const TransferWebpackPlugin = require('transfer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  
   entry: [ 'react-hot-loader/patch', './src/index.jsx',],
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -41,7 +42,11 @@ module.exports = {
     ], '.'),
     new webpack.DefinePlugin({
       'process.env': {
+<<<<<<< HEAD
 	      ENDPOINT: JSON.stringify(process.env.ENDPOINT || 'http://0.0.0.0:9000/api'),
+=======
+        ENDPOINT: JSON.stringify(process.env.ENDPOINT || 'http://52.59.97.139:9000/api'),
+>>>>>>> parent of cb24253... Revert "Added hot-reload but still doesn't work. Readme edit."
       },
     }),
   ],
