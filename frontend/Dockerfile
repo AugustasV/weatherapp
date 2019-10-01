@@ -15,5 +15,5 @@ COPY ./src/index.jsx ./
 COPY . . 
 # bind port
 EXPOSE 9000:9000
-CMD [ "npm", "start", "./index.jsx"]
+CMD [ "npm", "start", "./index.jsx", "dev"]
 
