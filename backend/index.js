@@ -2,10 +2,6 @@ export default hot(App)
 
 getDockerHost = require('get-docker-host');
 isInDocker = require('is-in-docker');
-// App.js
-import { hot } from 'react-hot-loader/root';
-const App = () => <div>Hello World!</div>;
-export default hot(App);
 
 checkDocker = () => {
     return new Promise((resolve, reject) => {
@@ -22,12 +18,6 @@ checkDocker = () => {
         }
     });
 };
-
-//Attach the hot middleware to the compiler & the server
-  app.use(require("webpack-hot-middleware")(compiler, {
-	      log: console.log, path: '/__webpack_hmr', heartbeat: 10 * 1000
-	    }));
-})();
 
 checkDocker().then((addr) => {
     if (addr) {
