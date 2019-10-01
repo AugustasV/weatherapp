@@ -1,9 +1,10 @@
 const webpack = require('webpack');
-
+const webpackDevMiddleware = require('webpack-dev-middleware');
 const TransferWebpackPlugin = require('transfer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  
   entry: [ 'react-hot-loader/patch', './src/index.jsx',],
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -41,7 +42,7 @@ module.exports = {
     ], '.'),
     new webpack.DefinePlugin({
       'process.env': {
-	      ENDPOINT: JSON.stringify(process.env.ENDPOINT || 'http://0.0.0.0:9000/api'),
+        ENDPOINT: JSON.stringify(process.env.ENDPOINT || 'http://0.0.0.0:9000/api'),
       },
     }),
   ],
