@@ -13,10 +13,11 @@ services:
     expose:
       - "9000"
     command: "npm start"
+    volumes:
+        - ./backend:/usr/src/backend:cached
 # setup frontend
   client:
     build: ./frontend
-    
     environment:
       - FRONT_PORT=${FRONT_PORT}
     expose:
@@ -25,5 +26,6 @@ services:
       - ${FRONT_PORT}:${FRONT_PORT}
     links:
       - server
-    command: npm start
-      
+    command: "npm start"
+    volumes:
+        - ./frontend:/usr/src/frontend:cached

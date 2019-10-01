@@ -1,3 +1,5 @@
+export default hot(App)
+
 getDockerHost = require('get-docker-host');
 isInDocker = require('is-in-docker');
 
