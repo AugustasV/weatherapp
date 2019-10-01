@@ -14,8 +14,7 @@
   },
   "dependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-native": "0.61.1"
+    "react-dom": "^15.4.2"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",
@@ -32,8 +31,6 @@
     "transfer-webpack-plugin": "^0.1.4",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.2",
-    "react-hot-loader": "^4.12.14",
-    "webpack-hot-middleware": "^2.18.2",
-    "webpack-dev-middleware": "^3.7.2"
+    "react-hot-loader": "^4.12.14"
   }
 }
