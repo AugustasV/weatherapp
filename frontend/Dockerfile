@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:lts-buster-slim
 MAINTAINER augustas
 # app directory
 WORKDIR /usr/scr/frontend

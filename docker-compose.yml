@@ -12,7 +12,7 @@ services:
       - ${APP_SERVER_PORT}:${APP_SERVER_PORT}
     expose:
       - "9000"
-    command: "npm start"
+    command: "nodemon --watch views -e js,html"
     volumes:
         - ./backend:/usr/src/backend:cached
 # setup frontend

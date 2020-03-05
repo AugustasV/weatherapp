@@ -62,4 +62,3 @@ module.exports = {
     new webpack.DefinePlugin(GLOBALS),
   ],
 };
-
