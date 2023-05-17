@@ -40,9 +40,12 @@ Build and send images to Github Packages.
 ### Testing
 
 *Test automation is key in developing good quality applications. Finding bugs in early stages of development is valuable in any software development project.*
-Generate tests, generate coverage report
-Run tests through Github Action pipeline.
-Generate tests coverage report
+
+* Generate tests, generate coverage report
+
+* Run tests through Github Action pipeline.
+
+* Generate tests coverage report
 <!-- * Create automated tests for the application. (tip: [mocha](https://mochajs.org/))
 
 * Create [Robot Framework](http://robotframework.org/) integration tests. Hint: Start by creating a third container that gives expected weather data and direct the backend queries there by redefining the **MAP_ENDPOINT**. -->
